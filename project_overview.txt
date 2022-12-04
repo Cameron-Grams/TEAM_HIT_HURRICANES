@@ -1,0 +1,41 @@
+Project Overview:
+
+1. Establish the virtual environment in order to use the correct versions
+    requirements.txt
+    
+2. Collect Tweets for assessment; both of these require token configuration for access to the Twitter API
+    Notebook 2.a: add_features_to_known_ids.ipynb to request by Tweet Ids
+        - File 2.a.1: request_by_IDS.py file for the Twitter API call
+        
+    Notebook 2.b: by date-range based on known storms; requires academic access to retrieve historical Tweets
+    
+3. Classify Tweets in order to filter only the Tweets that are hurricane related
+    Notebook 3: predict_Yes_No_hurricane.ipynb to determine YES/NO hurricane related 
+    
+    (*** 
+    Here we can identify the work done to determine which model was best for this task; 
+    	MODEL_DEVELOPMENT/3.a.YES_NO_HURRICANE.ipynb
+    	MODEL_DEVELOPMENT/3.b.create_svm.ipynb
+    Here we will also have to establish the text vectorizer that we will use for the remainder of the pipeline
+    ***) 
+
+4. Tweets identified as hurricane related are sent to identify which category they fall in
+    ***************
+    
+    NEED THE LATEST FROM KI-HYUN ON THE CLASSIFIER AND EDA
+    
+    Here we can discuss the spot-check we performed on the classification
+        Decide if/how we want to perform subcategory spot-checks
+        
+    ***************
+    
+    Appendix: why we could not break down the other_relevant_information category further and the attempt
+        MODEL_DEVELOPMENT/4.a.create_other_sub_categories.ipynb
+        
+***********Need to Do************************
+5. Pipeline for the two classifiers:
+    Input: collection of Tweets
+    Process: process text --> YES/NO hurricane related --> categories of information --> EDA
+    Output: Visualizations of patterns within the categories 
+    
+
