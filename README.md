@@ -30,10 +30,10 @@ source env/bin/activate
 ```
 
 2. Collect Tweets for use in analysis by either:
-    A. Augmenting the collection with time features by using notebook 2.a.ADD_FEATURES_BY_KNOWN_IDS
-    B. Collecting Tweets by a specific data range with notebook 2.b.ADDITIONAL_HURRICANE_DATA (this notebooks requires a Twitter Developer account with Academic Research access)
+    1. Augmenting the collection with time features by using notebook `2.a.ADD_FEATURES_BY_KNOWN_IDS`
+    2. Collecting Tweets by a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` (this notebooks requires a Twitter Developer account with Academic Research access)
 
-3. Classify the collection using the notebook 3.PREDICT_YES_NO_HURRICANE in order to ensure that the collection of tweets is hurricane related. 
+3. Classify the collection using the notebook `3.PREDICT_YES_NO_HURRICANE` in order to ensure that the collection of tweets is hurricane related. 
 
 
 
