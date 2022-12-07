@@ -28,15 +28,19 @@ Category 9, "other relevant information", was found to be the largest category a
 
 ```shell
 python -m venv hurricane_tweets
-install -r requirements.txt
+pip install -r requirements.txt
 source env/bin/activate
 ```
 
-2. Collect Tweets for use in analysis by either:
+2. Collect Tweets for use in analysis by either[^1]:
    - Augmenting a collection that has text and Tweet Ids with time features by using notebook `2.a.ADD_FEATURES_BY_KNOWN_IDS`
-   - Collecting Tweets from a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` (this notebooks requires a Twitter Developer account with Academic Research access)
+   - Collecting Tweets from a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` 
 
 3. Filter the Tweets in the collection using the notebook `3.PREDICT_YES_NO_HURRICANE` in order to ensure that the collection of tweets is hurricane related. 
+
+
+[^1]: These notebooks require a Twitter Developer account with Academic Research access and an additional config.py file with the values as described.
+
 
 
 _This project is released under the Apache License Version 2.0 in order to accomodate the Twitter API code adapted in request_by_IDS.py and request_history.py_
