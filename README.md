@@ -3,6 +3,9 @@
 ### Purpose
 The purpose of this project is to provide insight into hurricane related communication found on Twitter. Tweets related to hurricanes can be classified and examined for patterns relating to the time surrounding the hurricane. 
 
+### Quick Start
+If you have a collection of Tweets you can employ the Pipeline...
+
 ### Concept
 The project was developed from an [initial labeled dataset](https://crisisnlp.qcri.org/humaid_dataset.html#) used to train a model to classify Tweets as belonging to one of 9 categories:
 
@@ -30,11 +33,11 @@ source env/bin/activate
 ```
 
 2. Collect Tweets for use in analysis by either:
-    1. Augmenting the collection with time features by using notebook `2.a.ADD_FEATURES_BY_KNOWN_IDS`
-    2. Collecting Tweets by a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` (this notebooks requires a Twitter Developer account with Academic Research access)
+    1. Augmenting a collection that has text and Tweet Ids with time features by using notebook `2.a.ADD_FEATURES_BY_KNOWN_IDS`
+    2. Collecting Tweets from a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` (this notebooks requires a Twitter Developer account with Academic Research access)
 
-3. Classify the collection using the notebook `3.PREDICT_YES_NO_HURRICANE` in order to ensure that the collection of tweets is hurricane related. 
-
-
+3. Filter the Tweets in the collection using the notebook `3.PREDICT_YES_NO_HURRICANE` in order to ensure that the collection of tweets is hurricane related. 
 
 
+
+# NEED RELEASE/LICENSE INFORMATION...
