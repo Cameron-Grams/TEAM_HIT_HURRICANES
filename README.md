@@ -6,7 +6,7 @@ The purpose of this project is to provide insight into hurricane related communi
 **Use Case:** *A party interested in the communication on Twitter during a hurricane presents a collection of Tweet ids from known storm periods and asks for insights into how they can better format or structure communication over Twitter by examining trends or patterns in communication during the storm period.* 
 
 ### Quick Start
-Employing the data handler and notebooks that collect historical data from Twitter requires an [Twitter Developer Academic Research](https://developer.twitter.com/en/products/twitter-api/academic-research) account. There is an example of how to configure a `config.py` with the account credentials needed.
+Employing the data handler and notebooks that collect historical data from Twitter requires an [Twitter Developer Academic Research](https://developer.twitter.com/en/products/twitter-api/academic-research) account. Configure a `config.py` file with the account credentials as specified from the developer account.
 
 The `6.EXTENDED_PIPELINE.ipynb` notebook demonstrates the integration of the techniques that we developed to examine hurricane related communication over Twitter. 
 
