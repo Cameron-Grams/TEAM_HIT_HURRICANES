@@ -1,5 +1,5 @@
 # Team HIT Analysis of Hurricane related Tweets
-Team Members: [Ki-Hyun Biak](https://github.com/abka0214), Cameron Grams, and Ryan Jimenez
+Team Members: [Ki-Hyun Biak](https://github.com/abka0214), [Cameron Grams](https://github.com/Cameron-Grams), and [Ryan Jimenez](https://github.com/rjjimene)
 
 ### Purpose
 The purpose of this project is to provide insight into hurricane related communication found on Twitter. Tweets related to hurricanes can be classified and examined for patterns relating to the time surrounding the hurricane. 
