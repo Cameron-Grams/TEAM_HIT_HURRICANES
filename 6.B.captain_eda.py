@@ -1,19 +1,24 @@
 import pandas as pd
 import numpy as np
+import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 from sklearn.preprocessing import MinMaxScaler
 
 def normalize_dates(df):
+    # normalize the dates and return the normed date and hurricane in a dataframe
+    print("Storms being normalized:")
     scaler = MinMaxScaler(feature_range=(0, 100))
     each_hurricane = []
-    df['date'] = pd.to_datetime(df['created_at'])
+    df.loc[:, 'date'] = pd.to_datetime(df['created_at'], errors='coerce')
     hurricanes = df['hurricane'].unique()
+    df_small = df[['date', 'hurricane', 'class_label']]
     for h in hurricanes:
-        df_s = df.where(df['hurricane'] == h).dropna()
+        df_s = df_small.where(df_small['hurricane'] == h).dropna()
+        print(df_s.shape, h)
         norm_dates = scaler.fit_transform(df_s['date'].values.reshape(-1,1))
-        df_s['norm_date'] = norm_dates
+        df_s.loc[:, 'norm_date'] = norm_dates
         each_hurricane.append(df_s)
     df_normed = pd.concat(each_hurricane)
     return df_normed 
@@ -54,3 +59,25 @@ def strip_box(df):
     strip = sns.stripplot(x="norm_date", y="class_label", data=df,
                   size=1, color=".3", linewidth=0)
     return box, strip
+
+def read_indices_and_labels(file, pattern):
+
+    # open the file with the tweet ids and hurricane names
+    with open(file, 'r') as file:
+        lines = file.readlines()
+
+    # format the list of tuples to retrieve the full data
+    def find_ids_name(str, pattern):
+        # split the string to find the id and hurricane name
+        str_obj = re.match(pattern, str)
+        if str_obj is not None:
+            return (str_obj[1], str_obj[2])
+        else:
+            return "no_match"
+    id_name_tuples = [find_ids_name(x, pattern) for x in lines]
+    print("Length of id name tuples: ",len(id_name_tuples))
+    # filter bad entries by 'no_match'
+    ids_names = [x for x in id_name_tuples if x != "no_match"]
+    print(f"Length of id name: {len(ids_names)}")
+    return ids_names
+
