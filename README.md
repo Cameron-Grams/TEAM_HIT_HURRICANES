@@ -35,8 +35,8 @@ Category 9, "other relevant information", was found to be the largest category a
 
 ```shell
 python -m venv hurricane_tweets
-pip install -r requirements.txt
 source env/bin/activate
+pip install -r requirements.txt
 ```
 
 2. In training the classifier model, the HUMAID datasets of labeled tweets were combined and collected using `2.PRODUCE_FULL_LABELED_DATA.ipynb`. Additional data was used in the analysis by collecting Tweets by either[^1]:
