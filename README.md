@@ -7,7 +7,7 @@ The purpose of this project is to provide insight into hurricane related communi
 **Use Case:** *A party interested in the communication on Twitter during a hurricane presents a collection of Tweet ids from known storm periods and asks for insights into how they can better format or structure communication over Twitter by examining trends or patterns in communication during the storm period.* 
 
 ### Quick Start
-The `6.EXTENDED_PIPELINE.ipynb` notebook demonstrates the integration of the techniques that we developed to examine hurricane related communication over Twitter. **Example A** will execute in the notebook with sample data.  **Example B** requires the use of the features in the DataHandler that draw from the Twitter API.
+The `6.EXTENDED_PIPELINE.ipynb` notebook demonstrates the integration of the techniques that we developed to examine hurricane related communication over Twitter. **Example A** will execute in the notebook with sample data[^1].  **Example B** requires the use of the features in the DataHandler that draw from the Twitter API.
 
 Employing the data handler and notebooks that collect historical data from Twitter requires an [Twitter Developer Academic Research](https://developer.twitter.com/en/products/twitter-api/academic-research) account. Configure a `config.py` file with the account credentials as specified from the developer account. Additionally the use of the API will require managing the rate-limiting features of the Twitter API.  Cell Blocks from **Example B** should be considered for possible asynchronous use, it may be more efficient to collect the datasets from the API independent of the other functions of the notebook. 
 
@@ -39,7 +39,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-2. In training the classifier model, the HUMAID datasets of labeled tweets were combined and collected using `2.PRODUCE_FULL_LABELED_DATA.ipynb`. Additional data was used in the analysis by collecting Tweets by either[^1]:
+2. In training the classifier model, the HUMAID datasets of labeled tweets were combined and collected using `2.PRODUCE_FULL_LABELED_DATA.ipynb`. Additional data was used in the analysis by collecting Tweets by either[^2]:
    - Augmenting a collection that has text and Tweet Ids with time features by using notebook `2.a.ADD_FEATURES_BY_KNOWN_IDS`
    - Collecting Tweets from a specific data range with notebook `2.b.ADDITIONAL_HURRICANE_DATA` 
 
@@ -51,7 +51,8 @@ pip install -r requirements.txt
 
 6. The `6.EXTENDED_PIPELINE.ipynb` notebook consolidates this process. This notebook relies on three modules for EDA, managing the API calls and DataFrame formating, and the text vectorization using the TFIDVectorizer module from the scikit-learn library. Consolidating the vectorization process was essential in order to ensure that the process of first filtering and then classifying the Tweets could be conducted in a single operation.  There are significant constraints with the rate-limiting from the Twitter API so the process of running the notebook using the DataHandler (**Example B**) will take between 1 and 2 hours.  
 
-[^1]: These notebooks require a Twitter Developer account with Academic Research access and an additional config.py file with the values as described.
+[^1]: Notes for formating the module files are embedded as comments in the `6.Extended_Pipeline.ipynb` notebook. 
+[^2]: These notebooks require a Twitter Developer account with Academic Research access and an additional config.py file with the values as described.
 
 
 
